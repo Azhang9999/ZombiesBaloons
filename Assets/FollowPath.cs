@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 
+// TODO: keyboard control...
 public class FollowPath : MonoBehaviour
 {
     private Transform[] points;
@@ -23,19 +24,12 @@ public class FollowPath : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (points[index] == null)
-        {
-            Destroy(gameObject); //maybe bugs in the future
-            return;
-        }
-
         if (transform.position == points[index].position)
         {
             GoToNextPoint();
         }
 
         transform.position = Vector2.MoveTowards(transform.position, points[index].position, _movementSpeed * Time.deltaTime);
-
     }
 
     void GoToNextPoint()

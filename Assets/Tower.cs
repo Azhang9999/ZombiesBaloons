@@ -39,6 +39,7 @@ public class Tower : MonoBehaviour
 
                 followPath.Init(points, 10f);
                 currentShot--;
+                Debug.Log(currentShot);
             }
         }
         currentShot = shotNumbers;
