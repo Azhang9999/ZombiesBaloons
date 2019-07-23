@@ -9,6 +9,8 @@ public class GameController : MonoBehaviour
     public GameObject lostScreen;
 
     private LevelController _levelController;
+    private double time;
+    private double maxTime;
 
     public enum GAMESTATE {
         ON_PROGRESS, WINNING, LOSING, INITIALIZATION
@@ -29,12 +31,13 @@ public class GameController : MonoBehaviour
         if (currentState == GAMESTATE.INITIALIZATION)
         {
             currentState = GAMESTATE.ON_PROGRESS;
+            time = Time.time;
         }
         else if (currentState == GAMESTATE.ON_PROGRESS)
         {
             if (_levelController.NumberOfZombiesAvailable() == 0)
             {
-                if (_levelController.targetsRemaining > 0)
+                if (_levelController.targetsRemaining > 0 || Time.time - time < maxTime)
                 {
                     currentState = GAMESTATE.LOSING;
                 } else
