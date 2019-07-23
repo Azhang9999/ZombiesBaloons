@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class LevelController : MonoBehaviour
 {
     public Transform[] path;
-    public GameObject zombie;
+    public GameObject[] zombies;
     public Text textAvailable;
     public int deploysAvailable;
     public int level = 1;
@@ -25,7 +25,7 @@ public class LevelController : MonoBehaviour
     {
         if (deploysAvailable > 0)
         {
-            Instantiate(zombie);
+            Instantiate(zombies);
             deploysAvailable--;
         }
     }
