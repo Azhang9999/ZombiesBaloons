@@ -12,7 +12,7 @@ public class GameController : MonoBehaviour
     
     private LevelController _levelController;
     private double time;
-    private double maxTime = 10;
+    public double maxTime = 60;
     
 
     public enum GAMESTATE {
@@ -39,7 +39,7 @@ public class GameController : MonoBehaviour
         else if (currentState == GAMESTATE.ON_PROGRESS)
         {
             timer.text = "Time Left: " + (maxTime - (Time.time - time)).ToString();
-            if (_levelController.NumberOfZombiesAvailable() == 0 || (Time.time - time) < maxTime)
+            if (_levelController.NumberOfZombiesAvailable() == 0 || (Time.time - time) > maxTime)
             {
                 if (_levelController.targetsRemaining > 0)
                 {
