@@ -8,10 +8,12 @@ public class GameController : MonoBehaviour
 {
     public GameObject panel;
     public Text gameOverMessage;
+    public Text timer;
     
     private LevelController _levelController;
     private double time;
-    private double maxTime;
+    private double maxTime = 10;
+    
 
     public enum GAMESTATE {
         ON_PROGRESS, WINNING, LOSING, INITIALIZATION
@@ -36,9 +38,10 @@ public class GameController : MonoBehaviour
         }
         else if (currentState == GAMESTATE.ON_PROGRESS)
         {
-            if (_levelController.NumberOfZombiesAvailable() == 0)
+            timer.text = "Time Left: " + (maxTime - (Time.time - time)).ToString();
+            if (_levelController.NumberOfZombiesAvailable() == 0 || (Time.time - time) < maxTime)
             {
-                if (_levelController.targetsRemaining > 0 || Time.time - time < maxTime)
+                if (_levelController.targetsRemaining > 0)
                 {
                     currentState = GAMESTATE.LOSING;
                 } else
