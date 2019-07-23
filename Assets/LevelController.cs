@@ -16,8 +16,7 @@ public class LevelController : MonoBehaviour
 
     private void Start()
     {
-        deploysAvailable = level * 5;
-        targetsRemaining = deploysAvailable / 2;
+        init();
     }
 
     private void Update()
@@ -27,11 +26,17 @@ public class LevelController : MonoBehaviour
         currency++;
     }
 
+    public void init()
+    {
+        deploysAvailable = level * 5;
+        targetsRemaining = deploysAvailable / 2;
+    }
+
     public void Deploy()
     {
         if (deploysAvailable > 0 && currency > 120)
         {
-            Instantiate(zombies);
+            Instantiate(zombies[0]);
             deploysAvailable--;
             currency -= 120;
         }
