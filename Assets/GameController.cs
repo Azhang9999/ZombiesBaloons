@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Collections;
 using UnityEngine;
-using Microsoft.VisualBasic;
 
 public class GameController : MonoBehaviour
 {
@@ -57,6 +57,6 @@ public class GameController : MonoBehaviour
 
     private void EndGameAction()
     {
-        string resp = InputBox("Do you want to play again?", "Hey loser!", "yuh");
+        
     }
 }
