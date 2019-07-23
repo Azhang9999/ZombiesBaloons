@@ -17,6 +17,11 @@ public class InputController : MonoBehaviour
         zombieChoice = 1;
     }
 
+    public void OnZombie2Click()
+    {
+        zombieChoice = 2;
+    }
+
     public void OnDeployButtonClick()
     {
         levelController.Deploy(zombieChoice);
