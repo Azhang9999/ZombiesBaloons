@@ -12,10 +12,12 @@ public class LevelController : MonoBehaviour
     public int level = 1;
     public int currency = 0;
     public Text textCurrency;
+    public int targetsRemaining;
 
     private void Start()
     {
         deploysAvailable = level * 5;
+        targetsRemaining = deploysAvailable / 2;
     }
 
     private void Update()
@@ -33,5 +35,10 @@ public class LevelController : MonoBehaviour
             deploysAvailable--;
             currency -= 120;
         }
+    }
+
+    public int NumberOfZombiesAvailable()
+    {
+        return deploysAvailable + GameObject.FindGameObjectsWithTag("zombie").Length;
     }
 }
