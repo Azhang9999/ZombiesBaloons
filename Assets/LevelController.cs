@@ -10,6 +10,8 @@ public class LevelController : MonoBehaviour
     public Text textAvailable;
     public int deploysAvailable;
     public int level = 1;
+    public int currency = 0;
+    public Text textCurrency;
 
     private void Start()
     {
@@ -19,14 +21,17 @@ public class LevelController : MonoBehaviour
     private void Update()
     {
         textAvailable.text = "Deploy\n(" + deploysAvailable.ToString() + " Left)" ;
+        textCurrency.text = currency.ToString() + " Gold Coins";
+        currency++;
     }
 
     public void Deploy()
     {
-        if (deploysAvailable > 0)
+        if (deploysAvailable > 0 && currency > 120)
         {
             Instantiate(zombies);
             deploysAvailable--;
+            currency -= 120;
         }
     }
 }
