@@ -19,7 +19,7 @@ public class FollowPath : MonoBehaviour
     {
         _movementSpeed = movementSpeed;
         points = _points;
-        this.transform.position = points[0].position;
+        transform.position = points[0].position;
         index = 0;
     }
 
