@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: [LevelGrid, zombie, arrow]
+  tags:
+  - LevelGrid
+  - zombie
+  - arrow
+  - endgamemessage
   layers:
   - Default
   - TransparentFX
