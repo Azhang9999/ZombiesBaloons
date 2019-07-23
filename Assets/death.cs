@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class death : MonoBehaviour
 {
-    public int hitPoints = 3;
+    public int hitPoints = 1000;
     // Start is called before the first frame update
     void Start()
     {
