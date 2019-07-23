@@ -31,7 +31,7 @@ public class LevelController : MonoBehaviour
     {
         if (deploysAvailable > 0 && currency > 120)
         {
-            Instantiate(zombies);
+            Instantiate(zombies[0]);
             deploysAvailable--;
             currency -= 120;
         }

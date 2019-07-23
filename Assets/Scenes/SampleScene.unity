@@ -761,47 +761,6 @@ PrefabInstance:
       propertyPath: m_TagString
       value: LevelGrid
       objectReference: {fileID: 0}
-    - target: {fileID: 6009626801697670782, guid: 17137cfc82b89f2488c038d5f4388f4e,
-        type: 3}
-      propertyPath: path.Array.size
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 6009626801697670782, guid: 17137cfc82b89f2488c038d5f4388f4e,
-        type: 3}
-      propertyPath: path.Array.data[2]
-      value: 
-      objectReference: {fileID: 1129776864}
-    - target: {fileID: 6009626801697670782, guid: 17137cfc82b89f2488c038d5f4388f4e,
-        type: 3}
-      propertyPath: path.Array.data[3]
-      value: 
-      objectReference: {fileID: 1614203322}
-    - target: {fileID: 6009626801697670782, guid: 17137cfc82b89f2488c038d5f4388f4e,
-        type: 3}
-      propertyPath: path.Array.data[4]
-      value: 
-      objectReference: {fileID: 1468455216}
-    - target: {fileID: 6009626801697670782, guid: 17137cfc82b89f2488c038d5f4388f4e,
-        type: 3}
-      propertyPath: path.Array.data[5]
-      value: 
-      objectReference: {fileID: 387908847}
-    - target: {fileID: 6009626801697670782, guid: 17137cfc82b89f2488c038d5f4388f4e,
-        type: 3}
-      propertyPath: zombie
-      value: 
-      objectReference: {fileID: 71064328738082454, guid: e8d1bc2c0cb68524ab2aaa970ff5843c,
-        type: 3}
-    - target: {fileID: 6009626801697670782, guid: 17137cfc82b89f2488c038d5f4388f4e,
-        type: 3}
-      propertyPath: textAvailable
-      value: 
-      objectReference: {fileID: 1817061045}
-    - target: {fileID: 6009626801697670782, guid: 17137cfc82b89f2488c038d5f4388f4e,
-        type: 3}
-      propertyPath: textCurrency
-      value: 
-      objectReference: {fileID: 726906454}
     - target: {fileID: 6009626801697670783, guid: 17137cfc82b89f2488c038d5f4388f4e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -857,6 +816,58 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6009626801697670782, guid: 17137cfc82b89f2488c038d5f4388f4e,
+        type: 3}
+      propertyPath: path.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6009626801697670782, guid: 17137cfc82b89f2488c038d5f4388f4e,
+        type: 3}
+      propertyPath: zombies.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6009626801697670782, guid: 17137cfc82b89f2488c038d5f4388f4e,
+        type: 3}
+      propertyPath: path.Array.data[2]
+      value: 
+      objectReference: {fileID: 1129776864}
+    - target: {fileID: 6009626801697670782, guid: 17137cfc82b89f2488c038d5f4388f4e,
+        type: 3}
+      propertyPath: path.Array.data[3]
+      value: 
+      objectReference: {fileID: 1614203322}
+    - target: {fileID: 6009626801697670782, guid: 17137cfc82b89f2488c038d5f4388f4e,
+        type: 3}
+      propertyPath: path.Array.data[4]
+      value: 
+      objectReference: {fileID: 1468455216}
+    - target: {fileID: 6009626801697670782, guid: 17137cfc82b89f2488c038d5f4388f4e,
+        type: 3}
+      propertyPath: path.Array.data[5]
+      value: 
+      objectReference: {fileID: 387908847}
+    - target: {fileID: 6009626801697670782, guid: 17137cfc82b89f2488c038d5f4388f4e,
+        type: 3}
+      propertyPath: zombie
+      value: 
+      objectReference: {fileID: 71064328738082454, guid: e8d1bc2c0cb68524ab2aaa970ff5843c,
+        type: 3}
+    - target: {fileID: 6009626801697670782, guid: 17137cfc82b89f2488c038d5f4388f4e,
+        type: 3}
+      propertyPath: textAvailable
+      value: 
+      objectReference: {fileID: 1817061045}
+    - target: {fileID: 6009626801697670782, guid: 17137cfc82b89f2488c038d5f4388f4e,
+        type: 3}
+      propertyPath: textCurrency
+      value: 
+      objectReference: {fileID: 726906454}
+    - target: {fileID: 6009626801697670782, guid: 17137cfc82b89f2488c038d5f4388f4e,
+        type: 3}
+      propertyPath: zombies.Array.data[0]
+      value: 
+      objectReference: {fileID: 71064328738082454, guid: e8d1bc2c0cb68524ab2aaa970ff5843c,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17137cfc82b89f2488c038d5f4388f4e, type: 3}
 --- !u!1 &2096016848
