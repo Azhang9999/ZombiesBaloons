@@ -32,14 +32,14 @@ public class Tower : MonoBehaviour
             if (radius > dist && counter % frequency == 0 && currentShot != 0)
             {
                 GameObject arrowTemp = Instantiate(arrow);
+                arrowTemp.GetComponent<ArrowController>().target = zombies[i].transform;
                 FollowPath followPath = arrowTemp.GetComponent<FollowPath>();
                 var points = new Transform[2];
-                points[0] = this.transform; // tower poisition
+                points[0] =  transform; // tower poisition
                 points[1] = zombies[i].transform; // zombie position
 
                 followPath.Init(points, 10f);
                 currentShot--;
-                Debug.Log(currentShot);
             }
         }
         currentShot = shotNumbers;
