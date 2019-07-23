@@ -27,11 +27,11 @@ public class LevelController : MonoBehaviour
         currency++;
     }
 
-    public void Deploy()
+    public void Deploy(int choice)
     {
         if (deploysAvailable > 0 && currency > 120)
         {
-            Instantiate(zombies);
+            Instantiate(zombies[choice]);
             deploysAvailable--;
             currency -= 120;
         }

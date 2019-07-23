@@ -5,10 +5,20 @@ using UnityEngine;
 public class InputController : MonoBehaviour
 {
     public LevelController levelController;
+    public int zombieChoice = 0;
 
+    public void OnZombie0Click()
+    {
+        zombieChoice = 0;
+    }
+
+    public void OnZombie1Click()
+    {
+        zombieChoice = 1;
+    }
 
     public void OnDeployButtonClick()
     {
-        levelController.Deploy();
+        levelController.Deploy(zombieChoice);
     }
 }
