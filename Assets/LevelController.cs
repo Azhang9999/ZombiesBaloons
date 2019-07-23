@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -31,12 +31,12 @@ public class LevelController : MonoBehaviour
         deploysAvailable = level * 5;
         targetsRemaining = deploysAvailable / 2;
     }
-
-    public void Deploy()
+	
+    public void Deploy(int choice)
     {
         if (deploysAvailable > 0 && currency > 120)
         {
-            Instantiate(zombies[0]);
+            Instantiate(zombies[choice]);
             deploysAvailable--;
             currency -= 120;
         }
