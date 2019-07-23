@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
-    public GameObject winScreen;
-    public GameObject lostScreen;
-
+    public GameObject panel;
+    public Text gameOverMessage;
+    
     private LevelController _levelController;
 
     public enum GAMESTATE {
@@ -45,18 +46,19 @@ public class GameController : MonoBehaviour
         }
         else if (currentState == GAMESTATE.WINNING)
         {
-            winScreen.SetActive(true);
-            EndGameAction();
+            gameOverMessage.text = "Congratulations!";
+            panel.SetActive(true);
         }
         else if (currentState == GAMESTATE.LOSING)
         {
-            lostScreen.SetActive(true);
-            EndGameAction();
+            gameOverMessage.text = "Hey loser!";
+            panel.SetActive(true);
         }
     }
 
-    private void EndGameAction()
+    public void OnClick()
     {
-        
+        currentState = GAMESTATE.INITIALIZATION;//
+        Application.LoadLevel(Application.loadedLevel);
     }
 }
