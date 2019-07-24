@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 155298852}
   - component: {fileID: 155298851}
   - component: {fileID: 155298853}
+  - component: {fileID: 155298854}
   m_Layer: 1
   m_Name: GameHandler
   m_TagString: Untagged
@@ -182,6 +183,18 @@ MonoBehaviour:
   gameOverMessage: {fileID: 278843895}
   timer: {fileID: 517806505}
   maxTime: 60
+--- !u!114 &155298854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 155298850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b01378a00930d648b48692e77344d6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &278843893
 GameObject:
   m_ObjectHideFlags: 0
