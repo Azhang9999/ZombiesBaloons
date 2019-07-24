@@ -8,8 +8,14 @@ public class ZombieController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GetComponent<FollowPath>().Init(GameObject.FindGameObjectWithTag("LevelGrid").GetComponent<LevelController>().path, speed);
+
     }
+
+    public void SetPath(int path)
+    {
+        GetComponent<FollowPath>().Init(GameObject.FindGameObjectWithTag("LevelGrid").GetComponent<LevelController>().path[path].getPath(), speed);
+    }
+
 
     // Update is called once per frame
     void Update()
