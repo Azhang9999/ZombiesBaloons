@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   arrow: {fileID: 8308772774398225512, guid: 2a4ff30b6a1806d438ed3c3de7771026, type: 3}
-  radius: 8
+  radius: 5
   frequency: 30
   shotNumbers: 1
 --- !u!212 &2438298433651193166

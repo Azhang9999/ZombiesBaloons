@@ -183,6 +183,7 @@ MonoBehaviour:
   gameOverMessage: {fileID: 278843895}
   timer: {fileID: 517806505}
   maxTime: 60
+  tower: {fileID: 1027624309}
 --- !u!114 &155298854
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -887,6 +888,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 916784426}
   m_CullTransparentMesh: 0
+--- !u!1 &1027624309 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2438298433651193167, guid: d40c4908814627841a2583aa3804b3ca,
+    type: 3}
+  m_PrefabInstance: {fileID: 1909818496}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1056939154
 GameObject:
   m_ObjectHideFlags: 0
