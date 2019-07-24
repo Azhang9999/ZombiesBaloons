@@ -47,17 +47,6 @@ public class GameController : MonoBehaviour
             {
                 currentState = GAMESTATE.LOSING;
             }
-            /*if (_levelController.NumberOfZombiesAvailable() == 0 || (Time.time - time) > maxTime)
-            {
-                if (_levelController.targetsRemaining > 0)
-                {
-                    currentState = GAMESTATE.LOSING;
-                }
-                else
-                {
-                    currentState = GAMESTATE.WINNING;
-                }
-            }*/
         }
         else if (currentState == GAMESTATE.WINNING)
         {
