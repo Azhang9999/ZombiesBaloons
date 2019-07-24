@@ -13,6 +13,7 @@ public class LevelController : MonoBehaviour
     public int currency = 0;
     public Text textCurrency;
     public int targetsRemaining;
+    public Text textRemaining;
 
     private void Start()
     {
@@ -23,22 +24,23 @@ public class LevelController : MonoBehaviour
     {
         textAvailable.text = "Deploy\n(" + deploysAvailable.ToString() + " Left)" ;
         textCurrency.text = currency.ToString() + " Gold Coins";
+        textRemaining.text = targetsRemaining.ToString() + " Targets Remaining";
         currency++;
     }
 
     public void init()
     {
-        deploysAvailable = level * 5;
-        targetsRemaining = deploysAvailable / 2;
+        deploysAvailable = level * 15;
+        targetsRemaining = (int)(deploysAvailable * 0.6f);
     }
 	
-    public void Deploy(int choice)
+    public void Deploy(int choice, int cost)
     {
-        if (deploysAvailable > 0 && currency > 120)
+        if (deploysAvailable > 0 && currency > cost)
         {
             Instantiate(zombies[choice]);
             deploysAvailable--;
-            currency -= 120;
+            currency -= cost;
         }
     }
 

@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 71064328738082454, guid: e8d1bc2c0cb68524ab2aaa970ff5843c,
         type: 3}
       propertyPath: m_Name
-      value: Zombie Variant
+      value: Zombie Variant Shoe
       objectReference: {fileID: 0}
     - target: {fileID: 71064328738082459, guid: e8d1bc2c0cb68524ab2aaa970ff5843c,
         type: 3}
@@ -76,7 +76,7 @@ PrefabInstance:
     - target: {fileID: 6436712790488372483, guid: e8d1bc2c0cb68524ab2aaa970ff5843c,
         type: 3}
       propertyPath: speed
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: -8497145595061847911, guid: e8d1bc2c0cb68524ab2aaa970ff5843c,
         type: 3}

@@ -36,8 +36,10 @@ public class FollowPath : MonoBehaviour
         {
             GoToNextPoint();
         }
-
-        transform.position = Vector2.MoveTowards(transform.position, points[index].position, _movementSpeed * Time.deltaTime);
+        if(transform!=null)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, points[index].position, _movementSpeed * Time.deltaTime);
+        }
     }
 
     void GoToNextPoint()

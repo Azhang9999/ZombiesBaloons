@@ -51,15 +51,13 @@ public class GameController : MonoBehaviour
                 towerNumber++;
             }
             timer.text = "Time Left: " + (maxTime - (Time.time - time)).ToString();
-            if (_levelController.NumberOfZombiesAvailable() == 0 || (Time.time - time) > maxTime)
+            if(_levelController.targetsRemaining == 0)
             {
-                if (_levelController.targetsRemaining > 0)
-                {
-                    currentState = GAMESTATE.LOSING;
-                } else
-                {
-                    currentState = GAMESTATE.WINNING;
-                }
+                currentState = GAMESTATE.WINNING;
+            }
+            else if(_levelController.NumberOfZombiesAvailable() < _levelController.targetsRemaining || (Time.time - time) > maxTime)
+            {
+                currentState = GAMESTATE.LOSING;
             }
         }
         else if (currentState == GAMESTATE.WINNING)

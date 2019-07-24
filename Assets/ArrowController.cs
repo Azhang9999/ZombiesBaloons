@@ -16,7 +16,9 @@ public class ArrowController : MonoBehaviour
     void Update()
     {
         
-
-        transform.rotation = Quaternion.LookRotation(Vector3.forward, target.position - transform.position);
+        if(transform!=null)
+        {
+            transform.rotation = Quaternion.LookRotation(Vector3.forward, target.position - transform.position);
+        }
     }
 }
