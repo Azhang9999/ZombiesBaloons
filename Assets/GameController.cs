@@ -39,16 +39,25 @@ public class GameController : MonoBehaviour
         else if (currentState == GAMESTATE.ON_PROGRESS)
         {
             timer.text = "Time Left: " + (maxTime - (Time.time - time)).ToString();
-            if (_levelController.NumberOfZombiesAvailable() == 0 || (Time.time - time) > maxTime)
+            if(_levelController.targetsRemaining == 0)
+            {
+                currentState = GAMESTATE.WINNING;
+            }
+            else if(_levelController.NumberOfZombiesAvailable() < _levelController.targetsRemaining || (Time.time - time) > maxTime)
+            {
+                currentState = GAMESTATE.LOSING;
+            }
+            /*if (_levelController.NumberOfZombiesAvailable() == 0 || (Time.time - time) > maxTime)
             {
                 if (_levelController.targetsRemaining > 0)
                 {
                     currentState = GAMESTATE.LOSING;
-                } else
+                }
+                else
                 {
                     currentState = GAMESTATE.WINNING;
                 }
-            }
+            }*/
         }
         else if (currentState == GAMESTATE.WINNING)
         {
