@@ -30,4 +30,14 @@ public class InputController : MonoBehaviour
     {
         levelController.Deploy(zombieChoice, zombieCost);
     }
+
+    public void OnGotoButtonClick1()
+    {
+        Application.LoadLevel("DoubleZombieScene 1");
+    }
+
+    public void OnGotoButtonClick2()
+    {
+        Application.LoadLevel("DoubleZombieScene");
+    }
 }
