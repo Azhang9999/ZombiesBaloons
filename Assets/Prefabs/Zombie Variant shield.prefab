@@ -81,7 +81,7 @@ PrefabInstance:
     - target: {fileID: -8497145595061847911, guid: e8d1bc2c0cb68524ab2aaa970ff5843c,
         type: 3}
       propertyPath: hitPoints
-      value: 1000
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e8d1bc2c0cb68524ab2aaa970ff5843c, type: 3}
