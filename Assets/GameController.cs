@@ -13,7 +13,6 @@ public class GameController : MonoBehaviour
     
     private LevelController _levelController;
     private double time;
-    public double maxTime = 60;
     private Transform[] path;
     public GameObject tower;
     private int towerNumber = 0;
@@ -50,12 +49,12 @@ public class GameController : MonoBehaviour
                 SpawnTowers();
                 towerNumber++;
             }
-            timer.text = "Time Left: " + ((int)(maxTime - (Time.time - time))).ToString();
+            timer.text = "Time Left: " + ((int)(_levelController.maxTime - (Time.time - time))).ToString();
             if(_levelController.targetsRemaining == 0)
             {
                 currentState = GAMESTATE.WINNING;
             }
-            else if(_levelController.NumberOfZombiesAvailable() < _levelController.targetsRemaining || (Time.time - time) > maxTime)
+            else if(_levelController.NumberOfZombiesAvailable() < _levelController.targetsRemaining || (Time.time - time) > _levelController.maxTime)
             {
                 currentState = GAMESTATE.LOSING;
             }
