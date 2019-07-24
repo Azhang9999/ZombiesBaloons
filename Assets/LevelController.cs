@@ -13,6 +13,7 @@ public class LevelController : MonoBehaviour
     public int currency = 0;
     public Text textCurrency;
     public int targetsRemaining;
+    public Text textRemaining;
 
     private void Start()
     {
@@ -23,6 +24,7 @@ public class LevelController : MonoBehaviour
     {
         textAvailable.text = "Deploy\n(" + deploysAvailable.ToString() + " Left)" ;
         textCurrency.text = currency.ToString() + " Gold Coins";
+        textRemaining.text = targetsRemaining.ToString() + " Targets Remaining";
         currency++;
     }
 
