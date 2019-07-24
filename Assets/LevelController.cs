@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class LevelController : MonoBehaviour
 {
-    public Transform[] path;
+    public List<ZombiePath> path;
     public GameObject[] zombies;
     public Text textAvailable;
     public int deploysAvailable;
@@ -14,6 +14,7 @@ public class LevelController : MonoBehaviour
     public Text textCurrency;
     public int targetsRemaining;
     public Text textRemaining;
+    public double maxTime;
 
     private void Start()
     {
@@ -32,13 +33,15 @@ public class LevelController : MonoBehaviour
     {
         deploysAvailable = level * 15;
         targetsRemaining = (int)(deploysAvailable * 0.6f);
+        maxTime = 60 * (deploysAvailable / 10f);
     }
 	
-    public void Deploy(int choice, int cost)
+    public void Deploy(int choice, int cost, int pathIndex)
     {
         if (deploysAvailable > 0 && currency > cost)
         {
-            Instantiate(zombies[choice]);
+            GameObject zom = Instantiate(zombies[choice]);
+            zom.GetComponent<ZombieController>().SetPath(pathIndex);
             deploysAvailable--;
             currency -= cost;
         }

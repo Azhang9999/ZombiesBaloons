@@ -14,7 +14,7 @@ public class GameController : MonoBehaviour
     private LevelController _levelController;
     private double time;
     public double maxTime = 60;
-    private Transform[] path;
+    private List<ZombiePath> path;
     public GameObject tower;
     private int towerNumber = 0;
 
@@ -50,12 +50,12 @@ public class GameController : MonoBehaviour
                 SpawnTowers();
                 towerNumber++;
             }
-            timer.text = "Time Left: " + (maxTime - (Time.time - time)).ToString();
+            timer.text = "Time Left: " + ((int)(_levelController.maxTime - (Time.time - time))).ToString();
             if(_levelController.targetsRemaining == 0)
             {
                 currentState = GAMESTATE.WINNING;
             }
-            else if(_levelController.NumberOfZombiesAvailable() < _levelController.targetsRemaining || (Time.time - time) > maxTime)
+            else if(_levelController.NumberOfZombiesAvailable() < _levelController.targetsRemaining || (Time.time - time) > _levelController.maxTime)
             {
                 currentState = GAMESTATE.LOSING;
             }
@@ -81,14 +81,14 @@ public class GameController : MonoBehaviour
     public void SpawnTowers()
     {
         // Generate the coordinates of the new tower
-        float xPos = (float)Random.Range(-9.0f, 9.0f);//new Random().NextDouble
+        float xPos = (float)Random.Range(-9.0f, 9.0f);
         int index = 0;
-        while (path[index].transform.position.x < xPos)
+        while (path[0].getPath()[index].transform.position.x < xPos)
         {
             index++;
         }
         float topBottom = Random.Range(0.0f, 1.0f);
-        float yPos = path[index - 1].transform.position.y;
+        float yPos = path[0].getPath()[index - 1].transform.position.y;
         if (topBottom > 0.5)
         {
             yPos += 1.0f;
@@ -98,7 +98,6 @@ public class GameController : MonoBehaviour
         }
         // Generate new tower
         GameObject newTower = Instantiate(tower);
-        Debug.Log(xPos);// + " " + topBottom.ToString());
         newTower.transform.position = new Vector2(xPos, yPos);
     }
 }
