@@ -28,7 +28,7 @@ public class LevelController : MonoBehaviour
 
     public void init()
     {
-        deploysAvailable = level * 5;
+        deploysAvailable = level * 10;
         targetsRemaining = deploysAvailable / 2;
     }
 	
