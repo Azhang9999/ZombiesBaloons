@@ -32,13 +32,13 @@ public class LevelController : MonoBehaviour
         targetsRemaining = deploysAvailable / 2;
     }
 	
-    public void Deploy(int choice)
+    public void Deploy(int choice, int cost)
     {
-        if (deploysAvailable > 0 && currency > 120)
+        if (deploysAvailable > 0 && currency > cost)
         {
             Instantiate(zombies[choice]);
             deploysAvailable--;
-            currency -= 120;
+            currency -= cost;
         }
     }
 

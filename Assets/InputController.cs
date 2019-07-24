@@ -6,24 +6,28 @@ public class InputController : MonoBehaviour
 {
     public LevelController levelController;
     public int zombieChoice = 0;
+    public int zombieCost = 120;
 
     public void OnZombie0Click()
     {
         zombieChoice = 0;
+        zombieCost = 120;
     }
 
     public void OnZombie1Click()
     {
         zombieChoice = 1;
+        zombieCost = 240;
     }
 
     public void OnZombie2Click()
     {
         zombieChoice = 2;
+        zombieCost = 240;
     }
 
     public void OnDeployButtonClick()
     {
-        levelController.Deploy(zombieChoice);
+        levelController.Deploy(zombieChoice, zombieCost);
     }
 }
