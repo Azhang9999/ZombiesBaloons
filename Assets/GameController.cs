@@ -50,7 +50,7 @@ public class GameController : MonoBehaviour
                 SpawnTowers();
                 towerNumber++;
             }
-            timer.text = "Time Left: " + (maxTime - (Time.time - time)).ToString();
+            timer.text = "Time Left: " + ((int)(maxTime - (Time.time - time))).ToString();
             if(_levelController.targetsRemaining == 0)
             {
                 currentState = GAMESTATE.WINNING;
