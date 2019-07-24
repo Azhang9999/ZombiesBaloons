@@ -814,6 +814,12 @@ PrefabInstance:
         type: 3}
       propertyPath: zombies.Array.data[2]
       value: 
+      objectReference: {fileID: 8097778995864773603, guid: 73028b03aa8ac3c458aef32c246d2c4d,
+        type: 3}
+    - target: {fileID: 1686692530085471002, guid: b2a75e348f8abe949a377e833891ec9e,
+        type: 3}
+      propertyPath: zombies.Array.data[1]
+      value: 
       objectReference: {fileID: 5702933853282619376, guid: 38e344b0cee37294da738c38e8491644,
         type: 3}
     m_RemovedComponents: []
