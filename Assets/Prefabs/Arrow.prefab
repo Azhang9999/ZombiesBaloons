@@ -95,6 +95,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d960078f623c444db7c0c240a38a052, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  atEnd: 0
 --- !u!114 &-4940384002286127875
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -244,7 +245,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 15
+      scalar: 30
       minScalar: 5
       maxCurve:
         serializedVersion: 2
