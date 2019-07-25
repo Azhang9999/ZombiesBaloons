@@ -83,12 +83,13 @@ public class GameController : MonoBehaviour
         // Generate the coordinates of the new tower
         float xPos = (float)Random.Range(-9.0f, 9.0f);
         int index = 0;
-        while (path[0].getPath()[index].transform.position.x < xPos)
+        int pathNumber = Random.Range(0, path.Count);
+        while (path[pathNumber].getPath()[index].transform.position.x < xPos)
         {
             index++;
         }
         float topBottom = Random.Range(0.0f, 1.0f);
-        float yPos = path[0].getPath()[index - 1].transform.position.y;
+        float yPos = path[pathNumber].getPath()[index - 1].transform.position.y;
         if (topBottom > 0.5)
         {
             yPos += 1.0f;
