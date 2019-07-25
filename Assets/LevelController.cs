@@ -33,7 +33,7 @@ public class LevelController : MonoBehaviour
     {
         deploysAvailable = level * 15;
         targetsRemaining = (int)(deploysAvailable * 0.6f);
-        maxTime = 60 * (deploysAvailable / 10f);
+        maxTime = 50 * (deploysAvailable / 10f);
     }
 	
     public void Deploy(int choice, int cost, int pathIndex)

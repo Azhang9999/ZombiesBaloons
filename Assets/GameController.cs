@@ -45,7 +45,7 @@ public class GameController : MonoBehaviour
         }
         else if (currentState == GAMESTATE.ON_PROGRESS)
         {
-            if ((Time.time - time) / 5 > towerNumber)
+            if ((Time.time - time) / 2 > towerNumber)
             {
                 SpawnTowers();
                 towerNumber++;
