@@ -67,7 +67,7 @@ public class GameController : MonoBehaviour
         }
         else if (currentState == GAMESTATE.LOSING)
         {
-            gameOverMessage.text = "Hey loser!";
+            gameOverMessage.text = "You Lost!";
             panel.SetActive(true);
         }
     }

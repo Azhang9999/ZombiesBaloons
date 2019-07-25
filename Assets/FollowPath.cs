@@ -3,16 +3,15 @@
 // TODO: keyboard control...
 public class FollowPath : MonoBehaviour
 {
-    private LevelController _levelController;
     private Transform[] points;
     private float _movementSpeed = 3f;
+    public bool atEnd;
 
     private int index;
 
     // Start is called before the first frame update
     void Start()
     {
-        _levelController = GameObject.FindGameObjectWithTag("LevelGrid").GetComponent<LevelController>();
     }
 
     public void Init(Transform[] _points, float movementSpeed)
@@ -21,14 +20,21 @@ public class FollowPath : MonoBehaviour
         points = _points;
         transform.position = points[0].position;
         index = 0;
+        atEnd = true;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (gameObject == null || !atEnd)
+        {
+            return;
+        }
+
         if (points[index] == null)
         {
             Destroy(gameObject);
+            atEnd = false;
             return;
         }
 
@@ -38,7 +44,14 @@ public class FollowPath : MonoBehaviour
         }
         if(transform!=null)
         {
-            transform.position = Vector2.MoveTowards(transform.position, points[index].position, _movementSpeed * Time.deltaTime);
+            if (Vector2.Distance(transform.position, points[index].position) < _movementSpeed * Time.deltaTime)
+            {
+                transform.position = points[index].position;
+            }
+            else
+            {
+                transform.position = Vector2.MoveTowards(transform.position, points[index].position, _movementSpeed * Time.deltaTime);
+            }
         }
     }
 
@@ -48,10 +61,9 @@ public class FollowPath : MonoBehaviour
         {
             index++;
         }
-        else if(index==points.Length-1)
+        else if(index >= points.Length-1 && atEnd)
         {
-            _levelController.targetsRemaining -= 1;
-            Destroy(gameObject);
+            atEnd = false;
         }
     }
 }

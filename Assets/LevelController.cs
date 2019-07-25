@@ -15,6 +15,7 @@ public class LevelController : MonoBehaviour
     public int targetsRemaining;
     public Text textRemaining;
     public double maxTime;
+    public int onField;
 
     private void Start()
     {
@@ -23,9 +24,10 @@ public class LevelController : MonoBehaviour
 
     private void Update()
     {
+        onField = GameObject.FindGameObjectsWithTag("zombie").Length;
         textAvailable.text = "Deploy\n(" + deploysAvailable.ToString() + " Left)" ;
         textCurrency.text = currency.ToString() + " Gold Coins";
-        textRemaining.text = targetsRemaining.ToString() + " Targets Remaining";
+        textRemaining.text = targetsRemaining.ToString() + " Targets Remaining\n" + onField.ToString() + "On the field" ;
         currency++;
     }
 
@@ -34,6 +36,7 @@ public class LevelController : MonoBehaviour
         deploysAvailable = level * 15;
         targetsRemaining = (int)(deploysAvailable * 0.6f);
         maxTime = 50 * (deploysAvailable / 10f);
+        onField = GameObject.FindGameObjectsWithTag("zombie").Length;
     }
 	
     public void Deploy(int choice, int cost, int pathIndex)

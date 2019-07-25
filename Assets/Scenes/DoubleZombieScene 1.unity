@@ -2322,7 +2322,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 90, y: 13}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 160, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1513945764
 MonoBehaviour:
@@ -2357,7 +2357,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: X Targets Remaining
+  m_Text: 'X Targets Remaining
+
+    X On the field'
 --- !u!222 &1513945765
 CanvasRenderer:
   m_ObjectHideFlags: 0
