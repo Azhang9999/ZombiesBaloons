@@ -38,7 +38,7 @@ public class Tower : MonoBehaviour
                 points[0] =  transform; // tower poisition
                 points[1] = zombies[i].transform; // zombie position
 
-                followPath.Init(points, 10f);
+                followPath.Init(points, 30f);
                 currentShot--;
             }
         }

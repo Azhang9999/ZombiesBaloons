@@ -19,7 +19,7 @@ public class death : MonoBehaviour
         for (int i = 0; i < arrows.Length; i++)
         {
             //Debug.Log(Vector2.Distance(arrows[i].transform.position, this.transform.position));
-            if (Vector2.Distance(arrows[i].transform.position, this.transform.position) < 0.15f
+            if (Vector2.Distance(arrows[i].transform.position, this.transform.position) < 0.5f
                 || !arrows[i].GetComponent<FollowPath>().atEnd)
             {
                 hitPoints--;
