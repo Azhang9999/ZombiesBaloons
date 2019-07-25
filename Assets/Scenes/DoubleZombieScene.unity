@@ -2228,6 +2228,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: LevelGrid
       objectReference: {fileID: 0}
+    - target: {fileID: 6009626801131368895, guid: 17137cfc82b89f2488c038d5f4388f4e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -9.5
+      objectReference: {fileID: 0}
     - target: {fileID: 6009626801697670782, guid: 17137cfc82b89f2488c038d5f4388f4e,
         type: 3}
       propertyPath: path.Array.size
@@ -2289,7 +2294,7 @@ PrefabInstance:
         type: 3}
       propertyPath: zombies.Array.data[1]
       value: 
-      objectReference: {fileID: 5702933853282619376, guid: 38e344b0cee37294da738c38e8491644,
+      objectReference: {fileID: 5753520866521989489, guid: 38e344b0cee37294da738c38e8491644,
         type: 3}
     - target: {fileID: 6009626801697670782, guid: 17137cfc82b89f2488c038d5f4388f4e,
         type: 3}
@@ -2386,11 +2391,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6009626801131368895, guid: 17137cfc82b89f2488c038d5f4388f4e,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -9.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17137cfc82b89f2488c038d5f4388f4e, type: 3}
